@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="emp" class="gr.kyrkosma.spring.list.Employee" p:id="20" p:name="John"/>
+
+    <bean name="hospital" class="gr.kyrkosma.spring.list.Company">
+        <property name="name" value="MyCompany"/>
+        <property name="departments">
+            <list>
+                <value>IT</value>
+                <value>Cybersecurity</value>
+                <value>HR</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
