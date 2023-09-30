@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="employee" class="gr.kyrkosma.spring.innerbeans.Employee" p:id="1">
+        <property name="address">
+            <bean class="gr.kyrkosma.spring.innerbeans.Address" p:houseNumber="7" p:street="Lamias" p:city="Thessaloniki"/>
+        </property>
+    </bean>
+
+    <bean name="employee2" scope="prototype" class="gr.kyrkosma.spring.innerbeans.Employee" p:id="2">
+        <property name="address">
+            <bean class="gr.kyrkosma.spring.innerbeans.Address" p:houseNumber="99" p:street="Lamias" p:city="Thessaloniki"/>
+        </property>
+    </bean>
+
+</beans>
