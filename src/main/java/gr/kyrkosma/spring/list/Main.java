@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("list.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("configs/list.xml");
         Employee emp = (Employee) context.getBean("emp");
         Company hos = (Company) context.getBean("hospital");
         System.out.println(emp.getId() + " " + emp.getName());

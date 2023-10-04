@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("set.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("configs/set.xml");
         CarDealer carDealer = (CarDealer) context.getBean("carDealer");
         System.out.println(carDealer.getName() + " " + carDealer.getBrands());
     }

@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("dependencycheck.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("configs/dependencycheck.xml");
         Prescription prescription = (Prescription) context.getBean("prescription");
         System.out.println(prescription);
     }
